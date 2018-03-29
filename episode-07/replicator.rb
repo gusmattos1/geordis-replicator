@@ -30,7 +30,7 @@ class Replicator
     # In Ruby, nil and false are "falsey" and everything else is a "truthy",
     # including the number 0, empty arrays, and anything else (strings, classes, instances, etc.).
     # This should report back a "truthy" for the power to work.
-    @power = @enterprise.reactor.on
+    @power = true
   end
 
   # After the Enterprise is put together, this is the
@@ -146,7 +146,7 @@ class Replicator
 
     # Setup variables for temperature adjustment loop
     desired_temperature         = @recipe.temperature
-    maximum_adjustments_allowed = 5
+    maximum_adjustments_allowed = 50
     number_of_adjustments       = 0
 
     # Keep adjusting temperature until desired temperature is reached

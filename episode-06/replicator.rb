@@ -14,7 +14,7 @@ class Replicator
     @plate = Location.new
 
     # Setup the power for the replicator.
-    @power = false
+    @power = true
 
     # Connect the power to the reactor (the reactor is the power source).
     connect_to_power

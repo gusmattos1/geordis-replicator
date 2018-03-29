@@ -1,5 +1,3 @@
-require 'pry'
-
 class Replicator
 
   # When the Enterprise calls Replicator.new, this method executes.
@@ -43,7 +41,6 @@ class Replicator
   # it returns what's expect.
   def replicate(recipe)
 
-
     # Setup an instance variable for the recipe
     # so that other methods can see what the recipe is
     @recipe = recipe
@@ -53,6 +50,7 @@ class Replicator
     # transported and @inside_replicator will contain the glass
     # in its contents.
     retrieve_glass
+
     # Setup an instance variable to access the glass.
     @glass = @inside_replicator.contents.first
 
@@ -90,7 +88,6 @@ class Replicator
 
   # This moves the glass from the cupboard to inside the replicator.
   def retrieve_glass
-    
     @enterprise.transporter.energize(
       @enterprise.cupboard.find_glass,
       @enterprise.cupboard.shelf,
